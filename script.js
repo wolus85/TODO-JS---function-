@@ -1,7 +1,12 @@
+let tasks = [
+  { text: 'Wynieś śmieci' },
+  { text: 'Zmyj gary' },
+  { text: 'Zmieć podłogę' },
+]
+
 const renderContainer = function () {
   return document.createElement('div')
 }
-
 
 const renderTaskCOntainer = function (text = '') {
   const task = renderContainer()
@@ -14,12 +19,13 @@ const renderTaskCOntainer = function (text = '') {
   return task
 }
 
-const append = function (child,container = document.body) {
-
+const append = function (child, container = document.body) {
   container.appendChild(child)
 }
 
-// append
-// takes 2 params - child, container
-// it should appends child to container
-// *if no container passed container should be equal to document.body
+const render = function () {
+  const div = renderTaskCOntainer(text = 'wynieś śmieci')
+  append(div)
+}
+
+render()
