@@ -39,13 +39,17 @@ return taskListContainer
 
 }
 
-const addTask= function(text) {
-  const newTask = {
-    text:text
-  }
-  
-  tasks = tasks.concat(newTask)
+
+const setTasks = function (newTasks) {
+  tasks = newTasks
+
   render()
+}
+
+const addTask = function (text) {
+  const newTasks = tasks.concat({ text: text })
+
+  setTasks(newTasks)
 }
 
 
@@ -55,7 +59,7 @@ const render = function () {
   append(taskList,toDoListContainer)
 }
 
-// addTask('nie rób nic')
+addTask('zatrzyj kurze')
 
 render()
 
