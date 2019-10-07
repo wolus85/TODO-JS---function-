@@ -26,9 +26,6 @@ const append = function (child, container = document.body) {
 }
 
 
-
-
-
 const renderTaskList = function () {
 const taskListContainer = renderContainer() 
 taskListContainer.style.width = '100%'
@@ -42,11 +39,23 @@ return taskListContainer
 
 }
 
+const addTask= function(text) {
+  const newTask = {
+    text:text
+  }
+  
+  tasks = tasks.concat(newTask)
+  render()
+}
+
+
 const render = function () {
   toDoListContainer.innerText = ''
   const taskList = renderTaskList()
   append(taskList,toDoListContainer)
 }
+
+// addTask('nie rób nic')
 
 render()
 
