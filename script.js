@@ -27,6 +27,7 @@ const renderTaskFormContainer = function () {
 
   const input = document.createElement('input')
   const button = document.createElement('button')
+ 
 
   input.style.width = '100%'
   input.style.height = '30px'
@@ -39,13 +40,19 @@ const renderTaskFormContainer = function () {
   button.style.backgroundColor = 'white'
   button.style.borderRadius = '4px'
 
+
   button.innerText = 'Add task'
+ 
 
 button.addEventListener('click',()=>{
 addTask(input.value)
 })
+
+  
+
   append(input, taskFormContainer)
   append(button, taskFormContainer)
+ 
 
 
   return taskFormContainer
